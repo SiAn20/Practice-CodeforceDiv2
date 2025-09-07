@@ -22,6 +22,7 @@ void solve() {
   for (int i = n - 1; i >= 0; i--) {
     dp[i] = dp[i + 1];
     int v = a[i], t = idx[i];
+    
     if (t + v - 1 < (int)pos[v].size()) {
       int last = pos[v][t + v - 1];
       dp[i] = max(dp[i], v + dp[last + 1]);

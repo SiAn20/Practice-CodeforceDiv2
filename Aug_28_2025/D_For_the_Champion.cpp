@@ -33,7 +33,7 @@ void solve() {
   cout.flush();
   cin >> k;
 
-  sum = (k - min - 4e9) * (-1);
+  sum = (k - min - 4e9) * (-1); // suma de X + Y
 
   // calculamos la minima resta
   min = 2e9;
@@ -54,10 +54,10 @@ void solve() {
   cout.flush();
   cin >> k;
 
-  dif = (k - min - 4e9) * (-1);
+  dif = (k - min - 4e9) * (-1); // resta de X - Y
 
-  X = (sum + dif) / 2;
-  Y = sum - X;
+  X = (sum + dif) / 2; // despejamos X= (X+Y) + (X-Y) /2
+  Y = sum - X;         // despejamos Y= (X+Y) - X
   cout << "! " << X << " " << Y << endl;
   cout.flush();
 }
